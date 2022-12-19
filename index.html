@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="form-container">
+			<form class="myForm" name="myForm">
+				<div class="form name" id="name">
+					<label for="name"> Your Name: </label
+					><input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Enter your name here"
+						required
+					/>
+					<span class="formerror"></span>
+				</div>
+				<div class="form email" id="email">
+					<label for="email">Your Email:</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Enter your email here"
+					/>
+					<span class="formerror"></span>
+				</div>
+				<div class="form love">
+					<label for="love">What do you love:</label>
+					<select name="love-dropdown-list" id="love" name="love">
+						<option value="movies">movies</option>
+						<option value="books">books</option>
+						<option value="sports">sports</option>
+					</select>
+				</div>
+				<div class="form color">
+					<label for="color">Select Color</label>
+					<input type="color" name="color" id="color" />
+				</div>
+				<div class="form inception">
+					<label for="inception">Rate the movie Inception out of 10</label>
+					<input
+						type="range"
+						id="inception"
+						name="inception"
+						min="0"
+						max="10"
+						step="1"
+					/>
+				</div>
+				<div class="form book_genre" id="radio">
+					<legend>Book genre you love?</legend>
+					<span class="formerror"></span>
+					<div class="fiction">
+						<input type="radio" name="book_genre" id="Fiction" />
+						<label for="Fiction">Fiction</label>
+					</div>
+					<div class="non-fiction">
+						<input type="radio" name="book_genre" id="Non-fiction" />
+						<label for="Non-fiction">Non-fiction</label>
+					</div>
+					<div class="adventure">
+						<input type="radio" name="book_genre" id="Adventure" />
+						<label for="Adventure">Adventure</label>
+					</div>
+				</div>
+				<div class="form agree_to_terms" id="checkbox">
+					<input type="checkbox" name="terms" id="agree_to_terms" />
+					<label for="agree_to_terms">Agree to Terms</label>
+					<span class="formerror"></span>
+				</div>
+
+				<div class="button-container">
+					<button class="btn" type="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>
+
+
