@@ -28,7 +28,7 @@ function validateForm(e) {
 
 	let email = document.forms["myForm"]["email"].value;
 	//console.log(email);
-	if (email.length >= 15) {
+	if (email.length >= 30) {
 		seterror("email", "*email address is too long");
 		returnval = false;
 	}
@@ -42,6 +42,7 @@ function validateForm(e) {
 	let rating = document.querySelector("input[type=range]").value;
 	if (!checkbox.checked) {
 		seterror("checkbox", "*you must accept the T&C");
+		returnval = false;
 	}
 	let selectValue = document.querySelector("#love");
 	console.log(selectValue.value);
@@ -57,6 +58,7 @@ function validateForm(e) {
 	console.log(checkedRadio);
 	if (bool == false) {
 		seterror("radio", "*you have to select at least one genre!");
+		returnval = false;
 	}
 
 	if (returnval == true) {
@@ -91,7 +93,5 @@ function validateForm(e) {
 		buttonContainer.style.justifyContent="end";
 	}
 	
-	
-
 	return returnval;
 }
