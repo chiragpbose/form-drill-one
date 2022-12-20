@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin: 1px;
+	padding: 1px;
 }
 
 body {
@@ -14,10 +16,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	width: 50%;
+	justify-content: center;
+	width: 40%;
 
-    padding: 10px;
+	padding: 10px;
 }
 .form {
 	display: flex;
@@ -28,7 +30,6 @@ body {
 }
 .formerror {
 	color: red;
-    font-weight: bold;
 }
 #name {
 	width: 100%;
@@ -46,8 +47,8 @@ body {
 .form.agree_to_terms {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content:center;
+	align-items: baseline;
+	justify-content: flex-start;
 }
 .button-container {
 	display: flex;
@@ -55,4 +56,14 @@ body {
 .btn {
 	margin: 10px auto;
 	width: 90%;
+}
+.button-box {
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	padding: auto;
+	
+}
+.last-line {
+	text-decoration: underline;
 }

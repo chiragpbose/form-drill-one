@@ -65,33 +65,33 @@ function validateForm(e) {
 		let newDiv = document.createElement("div");
 		newDiv.classList.add("newDiv");
 		document.body.append(newDiv);
-
-		newDiv.style.width = "80vw";
-		newDiv.style.height = "80vh";
+		document.querySelector(".form-container").style.display = "none";
+		newDiv.style.width = "70%";
+		newDiv.style.height = "70%";
 		newDiv.style.backgroundColor = "white";
-		newDiv.style.position = "absolute";
+		//newDiv.style.position = "absolute";
 		newDiv.style.display = "flex";
 		newDiv.style.flexDirection = "column";
+		newDiv.style.alignItems = "flex-start";
+		newDiv.style.justifyContent = "space-around";
+		newDiv.style.padding = "10px";
 		newDiv.innerHTML = `
 		
-		<div class="button-container">
-		<button class="closeButton">Click</button></div>
+		<div class="button-box">
+		<button class="closeButton">Close</button></div>
 		<h1>Hello ${name}</h1>
 		<h4>Email: ${email}</h4>
 		<h4>You love: ${selectValue.value}</h4>
 		<h4>Color: ${colorSelected}</h4>
 		<h4>Rating: ${rating}</h4>
-		<h4>Book genre: ${checkedRadio}</h4>`;
+		<h4>Book genre: ${checkedRadio}</h4>
+		<h4 class="last-line">👉You agree to terms and Condition</h4>`;
 
 		document.querySelector(".closeButton").addEventListener("click", () => {
 			location.reload();
 		});
 		document.querySelector(".closeButton").style.width = "20vw";
-
-		let buttonContainer = document.querySelector(".button-container");
-		buttonContainer.style.display = "flex";
-		buttonContainer.style.justifyContent="end";
 	}
-	
+
 	return returnval;
 }
